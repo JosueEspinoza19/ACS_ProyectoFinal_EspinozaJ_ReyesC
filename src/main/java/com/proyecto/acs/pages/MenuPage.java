@@ -10,6 +10,7 @@ public class MenuPage extends BasePage {
     private By collapseMenuButton = By.cssSelector(".oxd-main-menu-search button i");
     private By searchMenuInput = By.cssSelector("input[placeholder='Search']");
     private By pimMenuOption = By.xpath("//span[text()='PIM']");
+    private By leaveMenuOption = By.xpath("//span[text()='Leave']");
     private By sidePanelContainer = By.cssSelector(".oxd-sidepanel");
 
     public MenuPage(WebDriver driver) {
@@ -32,6 +33,11 @@ public class MenuPage extends BasePage {
 
     public boolean isPimOptionVisibleOnly() {
         return isDisplayed(pimMenuOption);
+    }
+
+    public LeavePage clickLeaveMenu() {
+        click(leaveMenuOption);
+        return new LeavePage(driver); // Devuelve la página de Leave automáticamente
     }
 
     public boolean isMenuCollapsed() {
