@@ -12,8 +12,8 @@ public class LeaveTest extends BaseTest {
     public void tc15_VerifyLeaveTypesList() {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.loginAs("Admin", "admin123");
-        driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/leave/viewLeaveList");
         LeavePage leavePage = new LeavePage(driver);
+        leavePage.navigateToLeave();
         leavePage.navigateToLeaveTypes();
         Assert.assertTrue(leavePage.isLeaveTypesTableDisplayed(), "La tabla de 'Leave Types' no se cargó correctamente en la interfaz de usuario.");
     }
