@@ -6,9 +6,9 @@ import org.openqa.selenium.WebDriver;
 public class LeavePage extends BasePage {
 
     private By configureTab = By.xpath("//span[text()='Configure ']");
+    private By leaveOnMenu = By.xpath("//span[text()='Leave']");
     private By leaveTypesOption = By.xpath("//a[text()='Leave Types']");
     private By recordsTable = By.cssSelector(".oxd-table-body");
-
     public LeavePage(WebDriver driver) {
         super(driver);
     }
@@ -16,6 +16,10 @@ public class LeavePage extends BasePage {
     public void navigateToLeaveTypes() {
         click(configureTab);
         click(leaveTypesOption);
+    }
+
+    public void navigateToLeave() {
+        click(leaveOnMenu);
     }
 
     public boolean isLeaveTypesTableDisplayed() {
