@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="OrangeHRM Automation Suite">
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
 
     <test name="Módulos Principales">
         <classes>
@@ -8,6 +11,8 @@
             <class name="com.proyecto.acs.tests.MenuTest"/>
             <class name="com.proyecto.acs.tests.LeaveTest"/>
             <class name="com.proyecto.acs.tests.DashboardTest"/>
+            <class name="com.proyecto.acs.tests.PIMTest"/>
+            <class name="com.proyecto.acs.tests.AdminTest"/>
         </classes>
     </test>
 

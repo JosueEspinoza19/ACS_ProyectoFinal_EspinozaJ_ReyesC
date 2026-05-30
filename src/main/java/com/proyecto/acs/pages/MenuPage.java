@@ -9,6 +9,7 @@ public class MenuPage extends BasePage {
     private By logoutOption = By.xpath("//a[text()='Logout']");
     private By collapseMenuButton = By.cssSelector(".oxd-main-menu-search button i");
     private By searchMenuInput = By.cssSelector("input[placeholder='Search']");
+    private By adminMenuOption = By.xpath("//span[text()='Admin']");
     private By pimMenuOption = By.xpath("//span[text()='PIM']");
     private By leaveMenuOption = By.xpath("//span[text()='Leave']");
     private By sidePanelContainer = By.cssSelector(".oxd-sidepanel");
@@ -33,6 +34,16 @@ public class MenuPage extends BasePage {
 
     public boolean isPimOptionVisibleOnly() {
         return isDisplayed(pimMenuOption);
+    }
+
+    public AdminPage clickAdminMenu() {
+        click(adminMenuOption);
+        return new AdminPage(driver);
+    }
+
+    public PIMPage clickPimMenu() {
+        click(pimMenuOption);
+        return new PIMPage(driver);
     }
 
     public LeavePage clickLeaveMenu() {
