@@ -28,7 +28,7 @@ Este repositorio contiene un framework de automatización de pruebas robusto, es
 
 ## Arquitectura y Organización del Proyecto
 
-El proyecto está estructurado en cuatro capas lógicas fundamentales dentro del directorio `src/test/java`, garantizando una clara separación de responsabilidades:
+El proyecto está estructurado en cuatro capas lógicas fundamentales dentro del directorio `src/main/java` y `src/test/java`, garantizando una clara separación de responsabilidades:
 
 ```text
 src/main/java/
